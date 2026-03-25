@@ -67,7 +67,7 @@ with st.sidebar:
 
 # 5. ZONE PRINCIPALE
 if choix != "Choisir une catégorie...":
-    st.title(f"📊 {choix}")
+    st.title(f"{choix}")
     
     row = df[df[cat_col] == choix].iloc[0]
     
