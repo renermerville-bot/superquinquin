@@ -109,3 +109,21 @@ if choix != "Choisir une catégorie...":
 else:
     st.title("Bienvenue chez Superquinquin")
     st.write("Sélectionnez une catégorie à gauche pour voir les données.")
+
+
+# 1. Dans la zone principale, après l'affichage des graphiques
+st.divider()
+st.subheader("📝 Mettre à jour les critères")
+
+with st.form("form_update"):
+    nouveau_critere = st.text_input("Ajouter une note ou un nouveau critère pour cette catégorie")
+    valeur_critere = st.slider("Note de satisfaction (0 à 100)", 0, 100, 50)
+    
+    submit = st.form_submit_with_button("Enregistrer les modifications")
+
+    if submit:
+        # Ici, on simule la mise à jour
+        st.success(f"Donnée enregistrée : {nouveau_critere} avec la valeur {valeur_critere}%")
+        
+        # Pour réellement modifier le CSV, il faudrait utiliser une bibliothèque 
+        # comme 'gspread' ou renvoyer les données vers une URL de script Google.
