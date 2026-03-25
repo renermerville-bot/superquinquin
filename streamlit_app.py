@@ -13,7 +13,7 @@ st.markdown("""
     <style>
     /* Fond de la page gris très clair */
     .stApp {
-        background-color: #423D3D;
+        background-color: #422D3D;
     }
     
     /* Style des cartes de chiffres (Metrics) */
