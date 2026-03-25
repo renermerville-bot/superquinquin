@@ -111,19 +111,19 @@ else:
     st.write("Sélectionnez une catégorie à gauche pour voir les données.")
 
 
-# 1. Dans la zone principale, après l'affichage des graphiques
+# 1. Dans la zone principale, après le graphique
 st.divider()
 st.subheader("📝 Mettre à jour les critères")
 
+# Création du formulaire
 with st.form("form_update"):
     nouveau_critere = st.text_input("Ajouter une note ou un nouveau critère pour cette catégorie")
     valeur_critere = st.slider("Note de satisfaction (0 à 100)", 0, 100, 50)
     
-    submit = st.form_submit_with_button("Enregistrer les modifications")
+    # LA LIGNE CORRIGÉE CI-DESSOUS :
+    submit = st.form_submit_button("Enregistrer les modifications")
 
     if submit:
-        # Ici, on simule la mise à jour
-        st.success(f"Donnée enregistrée : {nouveau_critere} avec la valeur {valeur_critere}%")
-        
-        # Pour réellement modifier le CSV, il faudrait utiliser une bibliothèque 
-        # comme 'gspread' ou renvoyer les données vers une URL de script Google.
+        # Message de confirmation visuel
+        st.success(f"✅ Donnée enregistrée localement : '{nouveau_critere}' ({valeur_critere}%)")
+        st.info("Note : Pour que cela modifie réellement le Google Sheet, une connexion API (gspread) est nécessaire.")
