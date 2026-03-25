@@ -58,7 +58,7 @@ cat_col = "% Bio par catégories & principales sous-catégories Périmètre : 6 
 # 4. BARRE LATÉRALE (SIDEBAR)
 with st.sidebar:
     # Logo Superquinquin
-    st.image("https://superquinquin.fr/wp-content/uploads/2020/01/logo-superquinquin.png", use_container_width=True)
+    st.sidebar.image("logo.png", use_container_width=True)
     st.divider()
     st.subheader("Navigation")
     categories = sorted(df[cat_col].dropna().unique())
