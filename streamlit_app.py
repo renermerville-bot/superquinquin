@@ -1,11 +1,10 @@
-import streamlit as st
-import pandas as pd
-import matplotlib.pyplot as plt
+import streamlit as st #sert à créer l'interface web sur le site streamlit
+import pandas as pd  # outil pour manipuler le tableau de donner 
+import matplotlib.pyplot as plt 
 
 # 1. CONFIGURATION DE LA PAGE
 st.set_page_config(
     page_title="Superquinquin - Indicateurs",
-    page_icon="📊",
     layout="wide"
 )
 
@@ -14,7 +13,7 @@ st.markdown("""
     <style>
     /* Fond de la page gris très clair */
     .stApp {
-        background-color: #f0f2f6;
+        background-color: #423D3D;
     }
     
     /* Style des cartes de chiffres (Metrics) */
